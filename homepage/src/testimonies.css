@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background:#b3d9f7;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  background: #b3d9f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.sidebar .logo img {
+  width: 80px;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  background: #266dac;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+.sidebar nav ul li:hover {
+  background: #5aa9e6;
+}
+
+.sidebar-bottom {
+  margin-top: 20px;
+  color: white;
+}
+
+.sidebar-bottom p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+/* Main */
+.main-content {
+  flex: 1;
+  background: #fff;
+}
+
+/* Banner */
+.banner {
+  position:relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner .socials {
+  margin-top: 10px;
+}
+
+.banner .socials a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Stories */
+.stories {
+  padding: 40px;
+  text-align: center;
+}
+
+.stories h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.stories p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.story-card {
+  display: flex;
+  background: #f5f9fc;
+  border-radius: 10px;
+  padding: 15px;
+  align-items: flex-start;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.story-card img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.story-card h3 {
+  font-size: 16px;
+  color: #00598B;
+  margin-bottom: 5px;
+}
+
+/* Quotes */
+.quotes {
+  text-align: center;
+  margin: 25px 0;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: #003f66;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px;
+  gap: 20px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
+}
+
+.resources li::marker{
+  content: " >";
+}
+
+.links li::marker{
+  content: " >";
+}

@@ -1,0 +1,397 @@
+/* ==========================================================================
+   Reset & Global Styles
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #f3f9fd 0%, #e5f2fb 100%);
+  color: #1e293b;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Navbar (sticky + scroll effect)
+   ========================================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.85rem 5%;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+}
+
+.nav-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.07);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  bottom: -5px;
+  left: 0;
+  background: #0284c7;
+  transition: width 0.35s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #0284c7;
+}
+
+.btn {
+  padding: 0.65rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.98rem;
+  transition: all 0.3s ease;
+}
+
+.login {
+  background: transparent;
+  color: #0284c7;
+  border: 2px solid #0284c7;
+}
+
+.signup {
+  background: #0284c7;
+  color: white;
+}
+
+.login:hover {
+  background: #0284c7;
+  color: white;
+}
+
+.signup:hover {
+  background: #0369a1;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.2);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero {
+  padding: 7rem 5% 9rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-text {
+  flex: 1;
+  max-width: 620px;
+}
+
+.home-text h1 {
+  font-size: clamp(3.4rem, 7.5vw, 5.8rem);
+  font-weight: 800;
+  color: #0c4a6e;
+  line-height: 1.08;
+  margin-bottom: 1.4rem;
+}
+
+.home-text h1 span {
+  color: #0284c7;
+}
+
+.home-text p {
+  font-size: 1.15rem;
+  color: #475569;
+  max-width: 520px;
+}
+
+.home-img img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(2, 132, 199, 0.16);
+  display: block;
+}
+
+/* ==========================================================================
+   Section Headings
+   ========================================================================== */
+
+section > h1 {
+  text-align: center;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: #0c4a6e;
+  margin: 5rem 0 3rem;
+  position: relative;
+}
+
+section > h1::after {
+  content: '';
+  width: 100px;
+  height: 5px;
+  background: #0284c7;
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   About & Services Cards (visible + responsive)
+   ========================================================================== */
+
+.about,
+.service {
+  padding: 2rem 5% 5rem;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.upper,
+.lower {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.8rem;
+}
+
+.vision, .mission, .values,
+.chatting, .zoom, .testimonies,
+.counselling, .skills {
+  background: white;
+  border-radius: 16px;
+  padding: 2.2rem;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+  transition: all 0.35s ease;
+  margin: 10px auto;
+}
+
+.vision:hover, .mission:hover, .values:hover,
+.chatting:hover, .zoom:hover, .testimonies:hover,
+.counselling:hover, .skills:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(2, 132, 199, 0.14);
+}
+
+.vision h2, .mission h2, .values h2,
+.chatting h2, .zoom h2, .testimonies h2,
+.counselling h2, .skills h2 {
+  color: #0284c7;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Team Section (never cropped)
+   ========================================================================== */
+
+#team h1 span {
+  color: #0284c7;
+}
+
+.team1,
+.team2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 0 5%;
+  margin-bottom: 5rem;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.35s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-12px);
+}
+
+.team-member img {
+  width: 500px;
+  max-width: 280px;
+  height: 300px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  display: block;
+  margin: 0 auto;
+}
+
+.name {
+  margin-top: 1.2rem;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #0f172a;
+  background: #e0f2fe;
+  padding: 0.75rem 1.4rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Footer (grid adapts, no overflow)
+   ========================================================================== */
+
+footer {
+  background: #0c4a6e;
+  color: #e0f2fe;
+  padding: 5rem 5% 3rem;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  color: white;
+  font-size: 1.65rem;
+  margin-bottom: 1.4rem;
+}
+
+.footer a {
+  color: #bae6fd;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.footer a:hover {
+  color: #7dd3fc;
+}
+
+.contacts div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contacts img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================================================
+   Mobile-first responsive adjustments
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-img img {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 6%;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .nav-links {
+    gap: 1.4rem;
+  }
+  .hero {
+    padding: 6rem 6% 8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .home-text h1 {
+    font-size: 2.9rem;
+  }
+  section > h1 {
+    font-size: 2.2rem;
+  }
+  .team-member img {
+    max-width: 260px;
+  }
+}

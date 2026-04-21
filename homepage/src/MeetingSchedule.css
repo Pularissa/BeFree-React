@@ -1,0 +1,152 @@
+
+.container {
+  display: flex;
+  height: 100vh;
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #6AAFD5;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu.bottom {
+  margin-top: auto;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background: #187bcd;
+}
+
+.menu-item.active {
+  background: #187bcd;
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #e0e0e0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Meeting cards */
+.meeting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.meeting-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.date {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.date .day {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.date .month {
+  font-size: 12px;
+  color: #666;
+}
+
+.time {
+  font-size: 13px;
+  color: #555;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.details {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.details .title {
+  font-weight: bold;
+}
+
+.details .by {
+  font-size: 12px;
+  color: #666;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

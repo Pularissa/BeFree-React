@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0284c7;
+  --primary-dark: #0369a1;
+  --text: #0f172a;
+  --text-light: #334155;
+  --bg: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.94);
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow-sm: 0 4px 12px rgba(2, 132, 199, 0.08);
+  --shadow-md: 0 10px 30px rgba(2, 132, 199, 0.10);
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --transition: all 0.22s ease;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #f3f9fd 0%, #e5f2fb 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* ─── Sidebar ──────────────────────────────────────────────── */
+
+.sidebar {
+  width: 260px;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0c4a6e;
+  text-decoration: none;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(2, 132, 199, 0.1);
+  color: var(--primary-dark);
+  transform: translateX(4px);
+}
+
+.nav-link.active {
+  background: rgba(2, 132, 199, 0.16);
+  font-weight: 700;
+}
+
+/* Bottom section of sidebar */
+.sidebar-bottom {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar-profile,
+.logout-btn {
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logout-btn {
+  color: #b91c1c;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.14);
+}
+
+/* ─── Main Content ─────────────────────────────────────────── */
+
+.main-content {
+  flex: 1;
+  padding: 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header / Top bar in main area */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid rgba(2, 132, 199, 0.3);
+}
+
+/* Main card wrapper */
+.content-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+/* Reusable card style */
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Quote / motivational block */
+.quote {
+  background: linear-gradient(135deg, rgba(2, 132, 199, 0.1) 0%, rgba(99, 102, 241, 0.06) 100%);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  font-style: italic;
+  color: #1e293b;
+}
+
+.quote-mark {
+  color: var(--primary);
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 900;
+  margin-right: 0.4rem;
+}
+
+/* Meeting / appointment card */
+.meeting-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.meeting-date {
+  background: rgba(2, 132, 199, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+}
+
+.meeting-date h2 {
+  margin: 0;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: #0c4a6e;
+}
+
+.meeting-date p {
+  margin: 0.25rem 0 0;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.meeting-date small {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Peer / person card */
+.peer-grid {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.peer-pic {
+  width: 100%;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Footer note */
+.page-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: var(--text-light);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+/* ─── Responsive ───────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+  .meeting-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .sidebar-bottom {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  .main-content {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .peer-grid,
+  .meeting-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .peer-pic {
+    height: 180px;
+  }
+}

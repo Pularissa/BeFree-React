@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be1c282f.css",
+    "main.js": "/static/js/main.4c56903a.js",
+    "static/media/icon-natural.png": "/static/media/icon-natural.afcafcc72ba1f9371306.png",
+    "static/media/logo1.png": "/static/media/logo1.afcafcc72ba1f9371306.png",
+    "static/media/drug.jpg": "/static/media/drug.87619516ad62101b8daa.jpg",
+    "static/media/sandra.png": "/static/media/sandra.93048c0edf879729d943.png",
+    "static/media/shoulamite.jpg": "/static/media/shoulamite.52d212ad7a3571d91bfb.jpg",
+    "static/media/melissa.png": "/static/media/melissa.25968a7f0331023bd992.png",
+    "static/media/anitha.png": "/static/media/anitha.4d674e4dab3377d41078.png",
+    "static/media/twopeople.png": "/static/media/twopeople.61af81ceea816c015f96.png",
+    "static/media/Sonia.jpg": "/static/media/Sonia.4ed36f79f96eae06b00b.jpg",
+    "static/media/man2.jpeg": "/static/media/man2.a8bcfe0cfa9f742b3a29.jpeg",
+    "static/media/profession.jpg": "/static/media/profession.385c5fac68aab8554714.jpg",
+    "static/media/me.jpg": "/static/media/me.e6e20407caf864418ef9.jpg",
+    "static/media/woman1.jpeg": "/static/media/woman1.4c953b45418c1244c258.jpeg",
+    "index.html": "/index.html",
+    "main.be1c282f.css.map": "/static/css/main.be1c282f.css.map",
+    "main.4c56903a.js.map": "/static/js/main.4c56903a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be1c282f.css",
+    "static/js/main.4c56903a.js"
+  ]
+}
